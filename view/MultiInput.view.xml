@@ -1,0 +1,19 @@
+<mvc:View
+    controllerName="rroot.controller.MultiInput"
+    xmlns:l="sap.ui.layout"
+    xmlns:core="sap.ui.core"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+    <l:VerticalLayout
+            class="sapUiContentPadding"
+            width="100%">
+        <MultiInput width="500px"
+                    id="multiInput"
+                    suggestionItems="{
+				path: 'invoice>/Invoices'
+			}"
+                    showValueHelp="false">
+            <core:Item key="{ProductId}" text="{Name}" />
+        </MultiInput>
+    </l:VerticalLayout>
+</mvc:View>

@@ -1,0 +1,37 @@
+<mvc:View
+    controllerName="rroot.controller.ComboBox"
+    xmlns:core="sap.ui.core"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+    <Panel class="sapUiResponsiveMargin"
+           width="auto"
+           headerText="{i18n>combo}">
+        <content>
+            <ComboBox
+                    items="{
+					path: 'invoice>/Invoices'
+				}">
+                <core:Item key="{invoice>ProductName}" text="{invoice>ProductName}" />
+            </ComboBox>
+        </content>
+        <content>
+            <CheckBox text="Java" selected="true" />
+            <CheckBox text="C#" />
+            <CheckBox text="ABAP" />
+        </content>
+        <content>
+            <DateTimePicker
+                    id="DTP1"
+                    placeholder="Enter Date ..."
+                    change="handleChange"/>
+        </content>
+    </Panel>
+    <Panel class="sapUiResponsiveMargin"
+           width="auto">
+        <content>
+            <RadioButton groupName="GroupA" text="React JS" selected="true" />
+            <RadioButton groupName="GroupA" text="Angular JS" />
+            <RadioButton groupName="GroupA" text="SAPUI5 " />
+        </content>
+    </Panel>
+</mvc:View>

@@ -1,0 +1,20 @@
+<mvc:View
+xmlns:mvc="sap.ui.core.mvc"
+xmlns="sap.m"
+controllerName="rroot.controller.App"
+displayBlock="true">
+<App>
+  <pages>
+    <Page title="{i18n>homePageTitle}">
+        <content>
+            <mvc:XMLView viewName="rroot.view.Invoices"/>
+            <mvc:XMLView viewName="rroot.view.IconTab"/>
+            <!-- <mvc:XMLView viewName="rroot.view.Filter"/> -->
+            <mvc:XMLView viewName="rroot.view.ComboBox"/>
+            <mvc:XMLView viewName="rroot.view.MultiInput"/>
+            <mvc:XMLView viewName="rroot.view.Panel"/>
+        </content>
+    </Page>
+  </pages>
+</App>
+</mvc:View>

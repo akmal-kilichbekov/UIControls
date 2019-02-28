@@ -1,0 +1,41 @@
+<mvc:View
+        xmlns:l="sap.ui.layout"
+        xmlns:mvc="sap.ui.core.mvc"
+        xmlns="sap.m"
+        class="sapUiResponsiveMargin"
+        width="auto">
+    <l:VerticalLayout
+            class="sapUiContentPadding"
+            width="100%">
+    </l:VerticalLayout>
+    <IconTabBar
+            id="idIconTabBarSeparatorNoIcon"
+            expanded="false"
+            class="sapUiResponsiveContentPadding">
+        <items>
+            <IconTabFilter
+                    icon="sap-icon://hint"
+                    iconColor="Positive">
+                <Text text="Info content was clicked" />
+            </IconTabFilter>
+            <IconTabSeparator icon=""/>
+            <IconTabFilter
+                    icon="sap-icon://attachment"
+                    iconColor="Neutral"
+                    count="3">
+                <Text text="Attachments" />
+            </IconTabFilter>
+            <IconTabFilter
+                    icon="sap-icon://notes"
+                    count="12">
+                <Text text="Notes clicked" />
+            </IconTabFilter>
+            <IconTabSeparator icon=""/>
+            <IconTabFilter
+                    icon="sap-icon://group"
+                    iconColor="Negative">
+                <Text text="People content" />
+            </IconTabFilter>
+        </items>
+    </IconTabBar>
+</mvc:View>

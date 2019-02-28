@@ -1,0 +1,61 @@
+<mvc:View
+        controllerName="rroot.controller.Invoice"
+        xmlns="sap.m"
+        xmlns:mvc="sap.ui.core.mvc">
+    <Panel>
+        <Table
+            id="invoiceList"
+           class="sapUiResponsiveMargin"
+           width="auto"
+           items="{
+             path : 'invoice>/Invoices',
+             sorter : {
+                path : 'ProductName',
+                group : true
+             }
+            }">
+            <headerToolbar>
+                <Toolbar>
+                    <Title text="{i18n>invoiceListTitle}"/>
+                    <ToolbarSpacer/>
+                    <SearchField width="50%" search="onFilterInvoices"/>
+                </Toolbar>
+            </headerToolbar>
+            <columns>
+                <Column>
+                    <Text text="Product Name" />
+                </Column>
+                <Column>
+                    <Text text="Quantity" />
+                </Column>
+                <Column>
+                    <Text text="Price" />
+                </Column>
+                <Column>
+                    <Text text="Currency" />
+                </Column>
+            </columns>
+            <items>
+                <ColumnListItem>
+                    <cells>
+                        <Link
+                                text="{invoice>ProductName}"
+                                href="https://www.google.by/search?q={invoice>ProductName}" />
+                        <Link
+                                text="{invoice>Quantity}"
+                                subtle="true"
+                                press="handleLinkPress" />
+                        <Link
+                                text="{path: 'invoice>ExtendedPrice'}"
+                                subtle="true"
+                                press="handleLinkPress"/>
+                        <Link
+                                text="{path: 'view>/currency'}"
+                                subtle="true"
+                                press="handleLinkPress" />
+                    </cells>
+                </ColumnListItem>
+            </items>
+        </Table>
+    </Panel>
+</mvc:View>

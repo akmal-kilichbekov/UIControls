@@ -1,0 +1,22 @@
+<mvc:View
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    controllerName="rroot.controller.Panel">
+     <Panel class="sapUiResponsiveMargin"
+            width="auto"
+        headerText="{i18n>helloPanelTitle}">
+        <content>
+            <Button
+                    text="{i18n>showHelloButtonText}"
+                    press="onShowHello"/>
+            <Button
+                    text="{i18n>secondButton}"
+                    tap="onSecond"/>
+            <Input
+                    value="{/recipient/name}"
+                    description="Written word is: {/recipient/name}"
+                    valueLiveUpdate="true"
+                    width="60%" />
+        </content>
+     </Panel>
+</mvc:View>
